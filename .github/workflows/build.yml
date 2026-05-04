@@ -41,7 +41,7 @@ jobs:
         run: npm install
 
       - name: Install Tauri CLI
-        run: npm install -D @tauri/cli
+        run: npm install -D @tauri-apps/cli
 
       - name: Build Tauri application
         run: npx tauri build
