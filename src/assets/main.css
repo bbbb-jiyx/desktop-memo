@@ -1,0 +1,117 @@
+:root {
+  --bg-primary: #1e1e2e;
+  --bg-secondary: #313244;
+  --bg-tertiary: #45475a;
+  --text-primary: #cdd6f4;
+  --text-secondary: #a6adc8;
+  --accent: #89b4fa;
+  --accent-hover: #b4befe;
+  --danger: #f38ba8;
+  --success: #a6e3a1;
+  --warning: #f9e2af;
+  --border: #585b70;
+  --shadow: rgba(0, 0, 0, 0.3);
+  --opacity: 1;
+  --transition: 0.2s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 14px;
+  overflow: hidden;
+  user-select: none;
+}
+
+#app {
+  background: var(--bg-primary);
+  border-radius: 8px;
+  box-shadow: 0 8px 32px var(--shadow);
+  opacity: var(--opacity);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border);
+}
+
+/* 输入框 */
+input, textarea {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  padding: 8px 12px;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+  transition: border-color var(--transition);
+}
+input:focus, textarea:focus {
+  border-color: var(--accent);
+}
+textarea {
+  resize: none;
+}
+
+/* 按钮 */
+.btn {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all var(--transition);
+}
+.btn-primary {
+  background: var(--accent);
+  color: var(--bg-primary);
+}
+.btn-primary:hover {
+  background: var(--accent-hover);
+}
+.btn-danger {
+  background: var(--danger);
+  color: var(--bg-primary);
+}
+.btn-danger:hover {
+  opacity: 0.85;
+}
+.btn-secondary {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+.btn-secondary:hover {
+  background: var(--border);
+}
+
+/* 空状态 */
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-secondary);
+}
+.empty-state p {
+  margin-top: 10px;
+  font-size: 13px;
+}

@@ -1,0 +1,21 @@
+{
+  "name": "desktop-memo",
+  "version": "1.0.0",
+  "description": "轻量级Windows桌面便签，支持备忘录、代办事项、垃圾桶",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "vue": "^3.4.0",
+    "pinia": "^2.1.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.0",
+    "vite": "^5.0.0",
+    "tauri": "^2.0.0"
+  }
+}

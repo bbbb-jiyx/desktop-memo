@@ -1,0 +1,55 @@
+{
+  "$schema": "https://v2.tauri.app/schemas/config.schema.json",
+  "productName": "桌面便签",
+  "version": "1.0.0",
+  "identifier": "com.desktop-memo.app",
+  "build": {
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:1420",
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "title": "桌面便签",
+        "width": 500,
+        "height": 700,
+        "minWidth": 400,
+        "minHeight": 500,
+        "resizable": true,
+        "fullscreen": false,
+        "decorations": true,
+        "transparent": true,
+        "center": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "windows": {
+      "certificateThumbprint": null,
+      "digestAlgorithm": "sha256",
+      "timestampUrl": ""
+    }
+  },
+  "plugins": {
+    "fs": {
+      "scope": {
+        "allow": ["$APPDATA/*", "$APPDATA/**", "$RESOURCE/*", "$RESOURCE/**", "./worker/*", "./worker/**"]
+      }
+    }
+  }
+}
