@@ -52,7 +52,7 @@
 
 <script setup>
 import { ref, reactive } from 'vue'
-import { store, addTodo, toggleTodo as toggle, deleteTodo, formatDate } from '../stores/memo.js'
+import { store, addTodo, toggleTodo, deleteTodo, formatDate } from '../stores/memo.js'
 
 const newTodoTitle = ref('')
 const deleteConfirm = reactive({ visible: false, id: null })
@@ -65,7 +65,7 @@ async function addNewTodo() {
 }
 
 async function toggle(id) {
-  await toggle(id)
+  await toggleTodo(id)
 }
 
 function confirmDelete(id) {
