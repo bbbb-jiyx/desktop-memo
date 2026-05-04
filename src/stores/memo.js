@@ -293,7 +293,7 @@ async function syncReminderToTodo(memo) {
 }
 
 export {
-  state,
+  state as store,
   filteredMemos,
   init,
   addMemo,
