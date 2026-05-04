@@ -2,7 +2,7 @@
   "$schema": "https://v2.tauri.app/schemas/config.schema.json",
   "productName": "桌面便签",
   "version": "1.0.0",
-  "identifier": "com.desktop-memo.app",
+  "identifier": "com.desktopmemo.app",
   "build": {
     "frontendDist": "../dist",
     "devUrl": "http://localhost:1420",
@@ -31,7 +31,7 @@
   },
   "bundle": {
     "active": true,
-    "targets": "all",
+    "targets": ["nsis", "msi"],
     "icon": [
       "icons/32x32.png",
       "icons/128x128.png",
