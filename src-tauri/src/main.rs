@@ -4,5 +4,5 @@
 )]
 
 fn main() {
-    desktop_memo_lib::run()
+    desktop_memo::run()
 }
